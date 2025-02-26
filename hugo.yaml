@@ -1,0 +1,77 @@
+# Hugo configuration file
+title: Physical Chemistry
+baseURL: https://pchem.crumblearn.org/
+languageCode: en-us
+
+enableGitInfo: true
+
+module:
+  imports:
+    - path: github.com/oasci/crumblearn.org
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)'], ['$', '$']]
+        enable: true
+
+  # enable hextra syntax highlight
+  highlight:
+    noClasses: false
+
+menu:
+  main:
+    - name: Search
+      weight: 9
+      params:
+        type: search
+    - name: GitHub
+      weight: 10
+      url: "https://github.com/oasci/bc-cadd"
+      params:
+        icon: github
+
+params:
+  math: true
+
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    logo:
+      path: img/logo.svg
+  
+  page:
+    width: wide
+  
+  theme:
+    default: system
+    displayToggle: true
+
+  footer:
+    enable: true
+    displayCopyright: false
+    displayPoweredBy: false
+    width: normal
+  
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
+  search:
+    enable: true
+    type: flexsearch
+  
+  highlight:
+    copy:
+      enable: true
+      # hover | always
+      display: hover
+
+  editURL:
+    enable: true
+    base: "https://github.com/oasci/bc-pchem/edit/main/content"
