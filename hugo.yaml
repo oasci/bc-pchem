@@ -33,7 +33,7 @@ menu:
         type: search
     - name: GitHub
       weight: 10
-      url: "https://github.com/oasci/bc-cadd"
+      url: "https://github.com/oasci/bc-pchem"
       params:
         icon: github
 
